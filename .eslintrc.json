@@ -1,6 +1,17 @@
 {
-  "extends": ["eslint:recommended", "prettier", "prettier/react"],
-  "plugins": [],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommeneded",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "prettier/react"
+  ],
+  "rules": {
+    "react/prop-types": 0,
+    "no-console": 1
+  },
+  "plugins": ["react", "importS", "jsx-a11y"],
   "parserOptions": {
     "ecmaVersion": 2018, // Pode usar async/await
     "sourceType": "module", // Pode usar import/export
@@ -12,5 +23,10 @@
     "es6": true, // async/await
     "browser": true, // setTimeout and document and window
     "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }
